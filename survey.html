@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Eeshwar Dronavalli</title>
+    <link rel="icon" type="image/x-icon" href="./icons8-globe-50.png" />
+   <!-- Used Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+    <!-- Used Core theme CSS (includes Bootstrap)-->
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link href="./StyleSurvey.css" rel="stylesheet" />
+    <style>
+        .accordion-body {
+            color: black;
+            padding: 0;
+        }
+        
+        .basic-form>div {
+            text-align: left;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body id="page-top" style="scroll-behavior: auto !important;">
+    <!-- Navigation in survey-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background: linear-gradient(110deg, #006633  50%, #FFCC33 50%);" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="#page-top" style="font-size: 25px;">
+                <img src="./logo.png" width="100"> <h3  style="display: inline;">Department of <em>Computer Science </em></h3>
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="http://swe-645-sssignment1-edronava.s3-website-us-east-1.amazonaws.com/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Survey</a></li>
+                    <li class="nav-item"><a class="nav-link" href="http://swe-645-sssignment1-edronava.s3-website-us-east-1.amazonaws.com/profile/index.html">eszh</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Survey to provide feedback-->
+    <section class="about-section text-center pb-3" id="about" style="background: black;">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-9">
+                    <h2 class="text-white mb-4">Feedback</h2>
+                    <hr style="color: white;">
+                    <div style="color: white;">
+                        <p style="text-align: center;margin-bottom: 50px;">
+                            We value your feedback and strive to continually improve. Please share your thoughts with us.
+                        </p>
+                        <!-- Enabling autocomplete on the form-->
+                        <div class="p-2">
+                            <div class="d-flex justify-content-center">
+                                <div>
+                                    <label for="data">Raffle</label>
+                                    <input type="text" name="data" id="data" placeholder="Ex: 1,2,3,4,5,6,7,8,9,10" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <form class="basic-form row" autocomplete="on">
+                            <div class="col-md-6">
+                                <label for="username">First Name</label>
+                                <input class="form-control" type="text" name="username">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="username">Last Name<span style="color: red;">*</span> </label>
+                                <input class="form-control" type="text" name="lastname" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="address">Street Address</label>
+                                <input class="form-control" type="text" name="address">
+                            </div>
+                            <div class="col-md-6">
+                                <!-- Shows this field is required to sumbit using a red *-->
+                                <label for="city">City<span style="color: red;">*</span></label>
+                                <input class="form-control" type="text" name="city" required>
+                            </div>
+                            <div class="col-md-6">
+                                <!-- Shows this field is required to sumbit using a red *-->
+                                <label for="state">State<span style="color: red;">*</span></label>
+                                <input class="form-control" type="text" name="state" required>
+                            </div>
+                            <div class="col-md-6">
+                                <!-- Allows type to be number only and shows this field is required to sumbit-->
+                                <label for="zip">Zip<span style="color: red;">*</span></label>
+                                <input class="form-control" type="number" name="zip" required>
+                            </div>
+                            <div class="col-md-6">
+                                  <!-- Allows type to be email only and shows this field is required, contains placeholder-->
+                                <label for="email">E-Mail<span style="color: red;">*</span></label>
+                                <input class="form-control" type="email" name="email" placeholder="Ex: user@example.com" required>
+                            </div>
+                            <div class="col-md-6">
+                                <!-- Allows type to be utl only and shows this field is required, contains placeholder-->
+                                <label for="url">URL<span style="color: red;">*</span></label>
+                                <input class="form-control" type="url" name="url" placeholder="Ex: https://example.com" required>
+                            </div>
+                            <div class="col-md-6">
+                                <!-- Allows type to be date only and shows this field is required-->
+                                <label for="date">Date of Survey<span style="color: red;">*</span></label>
+                                <input class="form-control" type="date" name="date" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="telephone">Telephone Number<span style="color: red;">*</span></label>
+                                <input class="form-control" type="tel" name="telephone" id="telephone">
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label for="username">Your most liked thing about campus</label><br>
+                                 <!-- Checkbox to indicate most liked thing-->
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexcheck1">
+                                    <label class="form-check-label" for="flexcheck1">
+                                      Students
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheck2">
+                                    <label class="form-check-label" for="flexCheck2">
+                                      Location
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheck3">
+                                    <label class="form-check-label" for="flexCheck3">
+                                      campus
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheck4">
+                                    <label class="form-check-label" for="flexCheck4">
+                                      Atmosphere
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheck5">
+                                    <label class="form-check-label" for="flexCheck5">
+                                      Dorm Rooms
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheck6">
+                                    <label class="form-check-label" for="flexCheck6">
+                                      Sports
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <!-- Radio button to indicate interest in the university, and  this field is required indicated by red *-->
+                                <label for="username">How did you get interested in the university.<span style="color: red;">*</span></label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadio" required id="flexRadio1">
+                                    <label class="form-check-label" for="flexRadio1">
+                                      Friends
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadio" required id="flexRadio2">
+                                    <label class="form-check-label" for="flexRadio2">
+                                      Television
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadio" required id="flexRadio3">
+                                    <label class="form-check-label" for="flexRadio3">
+                                        Internet
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadio" required id="flexRadio4">
+                                    <label class="form-check-label" for="flexRadio4">
+                                        Other
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- Text are for additional comments, and required, contains placeholder-->
+                            <div class="col-md-12">
+                                <label for="remarks">Remarks<span style="color: red;">*</span></label>
+                                <textarea class="form-control" name="remarks" id="remarks" rows="5" required placeholder="Type NA if not applicable"></textarea>
+                            </div>
+                           
+                            <div class="col-md-6">
+                                <label for="year">Graduation Year<span style="color: red;">*</span></label>
+                                <input class="form-control mt-2" type="number" name="year" placeholder="YYYY" required>
+                            </div>
+                            <!--likelihood of recommending this school by default it is set to very likely-->
+                            <div class="col-md-6">
+                                <label for="year">Likelihood of recommending<span style="color: red;">*</span></label>
+                                <select class="form-control" name="likelihood" required>
+                                    <option value="very">Very Likely</option>
+                                    <option value="likely">Likely</option>
+                                    <option value="unlikely">UnLikely</option>
+                                </select>
+                            </div>
+                            <!-- Submit  button to submit the form-->
+                            <div style="text-align: right;">
+                                <button class="btn btn-primary" type="submit">Submit</button>
+                            </div>
+                            <div style="text-align: right;">
+                                <button class="btn btn-primary">Cancel Form</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
