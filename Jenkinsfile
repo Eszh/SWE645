@@ -1,7 +1,7 @@
 pipeline{
 	agent any
 	environment {
-		DOCKERHUB_PASS = credentials ('docker-pass')
+		DOCKERHUB_PASS = credentials('docker-oass')
 	}
 	stages{
 		stage("Building the Student Survey Image"){
@@ -11,7 +11,7 @@ pipeline{
 					sh 'rm -rf *.war'
 					sh 'jar -cvf Swe645Assignment2.war -C /var/lib/jenkins/workspace/Swe645-Assignment2 .'
 					sh 'echo ${BUILD_TIMESTAMP}'
-					sh 'docker login -u eeshwar4116 --password-stdin ${DOCKERHUB_PASS}'
+					sh 'docker login -u eeshwar4116 -p ${DOCKERHUB_PASS}'
 					sh 'docker build -t eeshwar4116/swe645survey:$BUILD_TIMESTAMP .'
 				}
 			}
