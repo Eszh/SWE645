@@ -26,7 +26,7 @@ pipeline{
 		stage("Deploying to rancher"){
 			steps{
 				script{
-					 sh 'kubectl rollout restart swedeployment/studentsurveypage'
+					 sh 'kubectl set image deployment/swedeployment container-0=eeshwar4116/studentsurveypage:latest'
 				}
 			}
 		}
