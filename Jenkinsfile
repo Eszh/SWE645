@@ -23,6 +23,14 @@ pipeline{
 				}
 			}
 		}
+		stage("Deploying to Rancher as single pod") {
+                      steps {
+                              script{
+                                      sh 'kubectl set image deployment/stusurvey-pipeline stusurvey-pipeline-eeshwar4116/studentsurveypage:${BUILD_TIMESTAMP} -n jenkins-pipeline'
+
+                                     }
+                             }
+		}
 		stage("Deploying to rancher"){
 			steps{
 				script{
