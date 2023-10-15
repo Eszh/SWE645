@@ -12,21 +12,21 @@ pipeline{
 					sh 'jar -cvf Swe645Assignment2.war *'
 					sh 'echo ${BUILD_TIMESTAMP}'
 					sh 'docker login -u eeshwar4116 -p ${DOCKERHUB_PASS}'
-					sh 'docker build -t eeshwar4116/swe645survey .'
+					sh 'docker build -t eeshwar4116/swe645survey:$BUILD_TIMESTAMP .'
 				}
 			}
 		}
 		stage("Pushing image to docker"){
 			steps{
 				script{
-					sh 'docker push eeshwar4116/swe645survey'
+					sh 'docker push eeshwar4116/swe645survey:$BUILD_TIMESTAMP'
 				}
 			}
 		}
 		stage("Deploying to rancher"){
 			steps{
 				script{
-					 sh 'kubectl set image  deployment/swedeployment container-0=eeshwar4116/swe645survey:latest'
+					 sh 'kubectl set image  deployment/swedeployment container-0=eeshwar4116/swe645survey:$BUILD_TIMESTAMP'
 				}
 			}
 		}
