@@ -12,21 +12,21 @@ pipeline{
 					sh 'jar -cvf Swe-645-Assignment2.war *'
 					sh 'echo ${BUILD_TIMESTAMP}'
 					sh 'docker login -u eeshwar4116 -p ${DOCKERHUB_PASS}'
-					sh 'docker build -t eeshwar4116/surveypage .'
+					sh 'docker build -t eeshwar4116/studentsurveypage .'
 				}
 			}
 		}
 		stage("Pushing image to docker"){
 			steps{
 				script{
-					sh 'docker push eeshwar4116/surveypage'
+					sh 'docker push eeshwar4116/studentsurveypage'
 				}
 			}
 		}
 		stage("Deploying to rancher"){
 			steps{
 				script{
-					sh 'kubectl rollout restart deploy deployment -n assignmentnamespace'
+					 sh 'kubectl set image deployment/surveypage-lb surveypage-lb-eeshwar4116/studentsurveypage:${BUILD_TIMESTAMP} -n jenkins-pipeline'
 				}
 			}
 		}
