@@ -11,6 +11,7 @@ pipeline{
 					sh 'rm -rf *.war'
 					sh 'jar -cvf Swe-645-Assignment2.war *'
 					sh 'echo ${BUILD_TIMESTAMP}'
+					sh ' sudo chmod 666 /var/run/docker.sock'
 					sh 'docker login -u eeshwar4116 -p ${DOCKERHUB_PASS}'
 					sh 'docker build -t eeshwar4116/surveypage .'
 				}
