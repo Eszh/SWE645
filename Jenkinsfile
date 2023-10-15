@@ -11,7 +11,7 @@ pipeline{
 					sh 'rm -rf *.war'
 					sh 'jar -cvf Swe645Assignment2.war -C /var/lib/jenkins/workspace/Swe645-Assignment2 .'
 					sh 'echo ${BUILD_TIMESTAMP}'
-					sh 'echo $DOCKER_CRED_PSW | docker login -u $DOCKER_CRED_USR --password-stdin'
+					sh 'echo $DOCKERHUB_PASS_PSW | docker login -u $DOCKERHUB_PASS_USR --password-stdin'
 					sh 'docker build -t eeshwar4116/swe645survey:$BUILD_TIMESTAMP .'
 				}
 			}
