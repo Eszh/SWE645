@@ -26,7 +26,7 @@ pipeline{
 		stage("Deploying to rancher"){
 			steps{
 				script{
-					 sh 'kubectl set image  deployment/swedeployment container-0=eeshwar4116/swe645survey:$BUILD_TIMESTAMP'
+					 sh 'kubectl rollout restart deploy deployment:$BUILD_TIMESTAMP'
 				}
 			}
 		}
