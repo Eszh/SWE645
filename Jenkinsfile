@@ -26,7 +26,7 @@ pipeline{
 		stage("Deploying to rancher"){
 			steps{
 				script{
-					 sh 'kubectl set image deployment/swedeployment container-0=eeshwar4116/studentsurveypage:latest:${BUILD_TIMESTAMP}'
+					 sh 'kubectl set image deployment/swedeployment container-0=eeshwar4116/studentsurveypage:latest ${BUILD_TIMESTAMP}'
 				}
 			}
 		}
