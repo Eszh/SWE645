@@ -26,7 +26,7 @@ pipeline{
 		stage("Deploying to rancher"){
 			steps{
 				script{
-					 sh 'pwd'
+					 sh 'echo $USER'
 				}
 			}
 		}
