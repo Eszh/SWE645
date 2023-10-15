@@ -26,7 +26,7 @@ pipeline{
 		stage("Deploying to rancher"){
 			steps{
 				script{
-					 sh 'kubectl rollout restart eeshwar4116/studentsurveypage'
+					 sh 'kubectl rollout restart swedeployment/studentsurveypage'
 				}
 			}
 		}
