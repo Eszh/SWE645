@@ -26,7 +26,7 @@ pipeline{
 		stage("Deploying to rancher"){
 			steps{
 				script{
-					 sh 'kubectl rollout restart deploy deployment -n assignmentnamespace'
+					 sh 'kubectl set image deployment/stusurvey-pipeline stusurvey-pipeline-eeshwar4116/studentsurveypage:${BUILD_TIMESTAMP} -n swenamespace'
 				}
 			}
 		}
